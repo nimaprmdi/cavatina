@@ -2815,6 +2815,71 @@ img {
 .c-carousel__single__slider--page .dot {
   display: none; }
 
+/**/
+.wp-block-columns {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; }
+
+.wp-block-column:first-child {
+  padding-top: 35vh;
+  width: 50%;
+  display: inline-block;
+  background-color: darkgoldenrod;
+  overflow-y: auto; }
+
+.wp-block-column:nth-child(2) {
+  background-color: darkgray;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
+  transition: 1s all; }
+
+.wp-block-column--full-width {
+  width: 100% !important; }
+
+.blocks-gallery-grid {
+  width: 100%;
+  height: 100%; }
+
+.wp-block-gallery {
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  background-color: darkturquoise; }
+
+.flickity-slider {
+  background-color: darksalmon; }
+  @media only screen and (min-width: 980px) {
+    .flickity-slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; } }
+
+.blocks-gallery-item {
+  height: 100% !important;
+  width: 400px !important;
+  max-width: 600px !important;
+  transition: 1s all !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: darkgreen; }
+  .blocks-gallery-item img {
+    max-width: 600px !important; }
+
+.flickity-viewport {
+  max-height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: darkred; }
+
 /* widgets
 --------------------------------------------- */
 .c-widget__title {
@@ -3291,7 +3356,7 @@ img {
 # Single
 --------------------------------------------------------------*/
 /*------------------------------------*\
-  #single
+  #Single
 \*------------------------------------*/
 .c-single {
   width: 100%;
@@ -3301,13 +3366,23 @@ img {
   align-items: flex-end;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  margin-top: 16px; }
+  margin-top: 16px;
+  background-color: darkgreen; }
   @media only screen and (min-width: 980px) {
     .c-single {
       flex-direction: column;
       height: 100%;
       margin-top: 0;
       padding-bottom: 0; } }
+
+/*------------------------------------*\
+  #Single content
+\*------------------------------------*/
+.c-single__content {
+  width: 100%;
+  height: 100%;
+  background-color: darkcyan;
+  padding-top: 5%; }
 
 /*------------------------------------*\
   #single context
@@ -3323,6 +3398,7 @@ img {
   @media only screen and (min-width: 980px) {
     .c-single__context {
       width: 50%;
+      width: 100%;
       margin-top: 0; } }
 
 .c-single__title {
@@ -3400,7 +3476,7 @@ img {
   align-content: flex-end; }
   @media only screen and (min-width: 980px) {
     .c-single__context__holder {
-      margin-top: calc(40vh);
+      margin-top: 60px;
       margin-right: 25px;
       min-height: calc(50vh); } }
 

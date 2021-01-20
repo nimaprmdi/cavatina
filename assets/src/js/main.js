@@ -220,7 +220,7 @@ function mainPageCarousels() {
 
 // Carousel - Single Page
 function singleCarousel() {
-  let carouselSingle = document.querySelector(".js-single__slider");
+  let carouselSingle = document.querySelector(".blocks-gallery-grid");
 
   let flCarouselSingle = new Flickity(carouselSingle, {
     freeScroll: isDesktop(),
@@ -229,19 +229,20 @@ function singleCarousel() {
     cellAlign: "left",
     pageDots: !isDesktop(),
     prevNextButtons: false,
+
     on: {
       ready: function () {},
       change: function (index) {
         if (isDesktop() === true) {
           // make slider full width with first drag
-          let singleCarousel = document.querySelector(".js-single__slider");
+          let singleCarousel = document.querySelector(".wp-block-column:nth-child(2)");
           singleCarousel.classList.add(
-            "c-carousel__single__slider--full-width"
+            "wp-block-column--full-width"
           );
 
           if (index === 0) {
             singleCarousel.classList.remove(
-              "c-carousel__single__slider--full-width"
+              "wp-block-column--full-width"
             );
           }
         }
@@ -249,6 +250,8 @@ function singleCarousel() {
     },
   });
 }
+
+singleCarousel();
 
 // if we have single carousel in page slider will render
 if (
@@ -258,3 +261,5 @@ if (
 ) {
   singleCarousel();
 }
+
+

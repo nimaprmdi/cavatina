@@ -365,3 +365,4 @@ function cavatina_get_post_number()
     $loop           = $wp_query->current_post + 1;
     return $offset + $loop;
 }
+

@@ -341,3 +341,112 @@
     display: none;
   }
 }
+
+
+
+/**/
+
+
+.wp-block-columns{
+  height: 100%;
+  //overflow: hidden;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+
+
+
+.wp-block-column:first-child{
+
+
+  padding-top: 35vh;
+  width: 50%;
+  display: inline-block;
+  background-color: darkgoldenrod;
+  overflow-y: auto;
+
+}
+
+.wp-block-column:nth-child(2){
+
+  background-color: darkgray;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
+
+  transition:1s all;
+
+}
+
+.wp-block-column--full-width{
+  width: 100% !important;
+}
+
+
+.blocks-gallery-grid{
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+.wp-block-gallery{
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+
+  background-color: darkturquoise;
+}
+
+.flickity-slider{
+
+  background-color: darksalmon;
+  @include media(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width:100%;
+  }
+}
+
+.blocks-gallery-item{
+
+  height: 100% !important;
+  width: 400px !important;
+  max-width: 600px !important;
+
+  transition: 1s all !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background-color: darkgreen;
+
+  img{
+    max-width: 600px !important;
+  }
+
+
+}
+
+.flickity-viewport{
+
+
+  max-height: 100% !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  background-color: darkred;
+
+}
